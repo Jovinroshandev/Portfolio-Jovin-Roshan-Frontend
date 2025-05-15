@@ -41,7 +41,7 @@ export default function Home({ setActiveBtn }) {
             </div>
             <p className="md:hidden text-white text-xs py-5 text-justify">I specialize in building full-stack web applications with React, MongoDB, and Node.js, with a focus on clean code, performance, and user experience.
                 Currently open to opportunities as a React Developer or MERN Stack Developer.</p>
-            <div className="md:hidden text-white text-xs flex  flex-col gap-y-2 justify-between mt-5">
+            <div className="md:hidden text-white text-xs flex  flex-col gap-y-2 justify-between mt-1">
                 <p className="border-[2px] mx-20 text-center text-yellow-200 border-yellow-400 p-1 rounded-full"><i class="fa-solid fa-location-dot pr-2" /> Chennai</p>
                 <p className="border-[2px] mx-10 text-center text-yellow-200 border-yellow-400 p-1 rounded-full"><i class="fa-solid fa-envelope pr-2"></i> jovin.roshan.dev@gmail.com</p>
                 <p className="border-[2px] mx-16 text-center text-yellow-200 border-yellow-400 p-1 rounded-full"><i class="fa-solid fa-phone-volume pr-2"></i> +91 8925164487</p>
