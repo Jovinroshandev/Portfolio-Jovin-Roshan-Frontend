@@ -33,7 +33,7 @@ export default function Home({setActiveBtn}) {
             </div>
             <p className="md:hidden text-white text-xs py-5 text-justify">I specialize in building full-stack web applications with React, MongoDB, and Node.js, with a focus on clean code, performance, and user experience.
                 Currently open to opportunities as a React Developer or MERN Stack Developer.</p>
-            <div className="flex justify-between items-center mt-5">
+            <div className="flex justify-between items-center mt-28">
                 <a href={Resume} target="_blank" className="md:hidden bg-gray-200  px-3 py-2 font-medium rounded-full">Download Resume</a>
                 <div className="flex gap-5">
                     <SocialMediaBtn link="https://www.linkedin.com/in/jovin-roshan-marn-stack-developer" btnStyle={<i className="fa-brands text-xl font-bold fa-linkedin-in" />} />
