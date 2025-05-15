@@ -118,7 +118,10 @@ export default function About({ setActiveBtn }) {
                 </h1>
                 <p className="text-white text-xs mb-1 w-48">Fundamentals of Web Development Program - Feb 8, 2025</p>
                 <a href={Certificate1}>
-                    <img className="w-36 border-[2px] border-yellow-400 rounded-xl" src={Certificate1_Image} alt="certificate_img" />
+                    <div className="glow-border w-fit p-[2px] rounded-xl">
+                        <img className="rounded-lg w-36 block" src={Certificate1_Image} alt="certificate_img" />
+                    </div>
+
                 </a>
             </div>
             {/* Link btn */}
