@@ -2,6 +2,8 @@ import SocialMediaBtn from "./social_media_btn"
 import { useEffect } from "react"
 import GradientText from "../GradiText"
 import GlowText from "./glowtext"
+import Certificate1 from "../assets/certificate/Fundamentals_of_Web_Development_Program_Feb_8_2025.pdf"
+import Certificate1_Image from "../assets/certificate/Certificate1_image.png"
 
 export default function About({ setActiveBtn }) {
     // Check Active Btn for Navbar
@@ -10,50 +12,50 @@ export default function About({ setActiveBtn }) {
             setActiveBtn("About")
         }, [setActiveBtn]
     )
-    
+
     const skillList = [
         {
-            name:"React",
-            icon:"fa-brands fa-react"
+            name: "React",
+            icon: "fa-brands fa-react"
         },
         {
-            name:"Node JS",
-            icon:"fa-brands fa-node"
+            name: "Node JS",
+            icon: "fa-brands fa-node"
         },
         {
-            name:"HTML",
-            icon:"fa-brands fa-html5"
+            name: "HTML",
+            icon: "fa-brands fa-html5"
         },
         {
-            name:"CSS",
-            icon:"fa-brands fa-css3-alt"
+            name: "CSS",
+            icon: "fa-brands fa-css3-alt"
         },
         {
-            name:"JavaScript",
-            icon:"fa-brands fa-js"
+            name: "JavaScript",
+            icon: "fa-brands fa-js"
         },
         {
-            name:"Tailwind CSS",
-            icon:"fa-brands fa-web-awesome"
+            name: "Tailwind CSS",
+            icon: "fa-brands fa-web-awesome"
         },
         {
-            name:"Express JS",
-            icon:"fa-solid fa-server"
+            name: "Express JS",
+            icon: "fa-solid fa-server"
         },
         {
-            name:"MongoDB",
-            icon:"fa-solid fa-database"
+            name: "MongoDB",
+            icon: "fa-solid fa-database"
         },
         {
-            name:"Python",
-            icon:"fa-brands fa-python"
+            name: "Python",
+            icon: "fa-brands fa-python"
         },
 
     ]
 
     // Component for Skill btn (Purpose for Reuse)
-    const SkillBtn = (props)=>{
-        return(
+    const SkillBtn = (props) => {
+        return (
             <GradientText colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]} animationSpeed={3} showBorder={true} className="custom-className text-white px-3 py-1 rounded-full">
                 <i className={props.icon} /><span className="text-white"> {props.btnValue}</span>
             </GradientText>
@@ -68,44 +70,56 @@ export default function About({ setActiveBtn }) {
                     {/* About me */}
                     <div>
                         <h1 className="text-yellow-400 md:text-xl md:font-bold font-medium">About Me</h1>
-                        <h1 className="text-white md:text-lg text-xs text-justify">Hi! I'm a passionate <span className="font-semibold"><GlowText>MERN Stack Developer</GlowText></span> with a strong focus on building fast, scalable, and user-friendly web applications. I specialize in React.js, Express.js, MongoDB, and Node.js, and enjoy turning ideas into real-world applications with clean code and modern UI design.</h1>
+                        <h1 className="text-white md:text-sm text-xs text-justify">Hi! I'm a passionate <span className="font-semibold"><GlowText>MERN Stack Developer</GlowText></span> with a strong focus on building fast, scalable, and user-friendly web applications. I specialize in React.js, Express.js, MongoDB, and Node.js, and enjoy turning ideas into real-world applications with clean code and modern UI design.</h1>
                     </div>
                     {/* Skill */}
-                    <div className="mt-4 md:mt-3">
+                    <div className="mt-2 md:mt-3">
                         <h1 className="text-yellow-400 font-medium md:font-bold text-base md:text-xl">
                             Skill
                         </h1>
-                        <div className="flex md:flex-col text-xs md:text-lg md:mt-1">
-                            <div className="grid grid-cols-2 md:grid-cols-5 gap-y-2">
-                                {skillList.map((item,index)=><SkillBtn key={index} btnValue={item.name} icon={item.icon}/>)}
+                        <div className="flex md:flex-col text-xs md:text-sm md:mt-1">
+                            <div className="grid grid-cols-2 md:grid-cols-6 gap-y-2">
+                                {skillList.map((item, index) => <SkillBtn key={index} btnValue={item.name} icon={item.icon} />)}
                             </div>
                         </div>
                     </div>
                     {/* Experience */}
-                    <div className="mt-4 md:mt-3">
-                        <h1 className="text-yellow-400 font-medium md:font-bold text-base md:text-xl">
-                            Professional Experience
-                        </h1>
-                        <p className="text-white text-xs md:text-lg text-justify">
-                            <span className="font-semibold">Python Developer</span> at Sterling Software Pvt Ltd, Chennai
-                        </p>
-                        <p className="text-white text-xs md:text-lg text-justify">
-                            <span className="font-semibold">Duration:</span> Sep 2023 – Dec 2024 &nbsp;|&nbsp; <span className="font-semibold">Experience:</span> 1.4 Years
-                        </p>
-                    </div>
-                    {/* Education Qualification */}
-                    <div className="mt-4 md:mt-3">
-                        <h1 className="text-yellow-400 font-medium md:font-bold text-base md:text-xl">
-                            Education Qualification
-                        </h1>
-                        <p className="text-white text-xs md:text-lg text-justify">
-                            B.com Computer Application (2016 - 2019)
-                        </p>
-                        <p className="text-white text-xs md:text-lg text-justify">
-                            Aditanar College of Arts and Science, Tiruchendur
-                        </p>
+                    <div className="flex flex-col md:flex-row md:gap-10">
+                        <div className="mt-2 md:mt-3">
+                            <h1 className="text-yellow-400 font-medium md:font-bold text-base md:text-xl">
+                                Professional Experience
+                            </h1>
+                            <p className="text-white text-xs md:text-sm text-justify">
+                                <span className="font-semibold">Python Developer</span> at Sterling Software Pvt Ltd, Chennai
+                            </p>
+                            <p className="text-white text-xs md:text-sm text-justify">
+                                <span className="font-semibold">Duration:</span> Sep 2023 – Dec 2024 &nbsp;|&nbsp; <span className="font-semibold">Experience:</span> 1.4 Years
+                            </p>
+                        </div>
+                        {/* Education Qualification */}
+                        <div className="mt-2 md:mt-3">
+                            <h1 className="text-yellow-400 font-medium md:font-bold text-base md:text-xl">
+                                Education Qualification
+                            </h1>
+                            <p className="text-white text-xs md:text-sm text-justify">
+                                B.com Computer Application (2016 - 2019)
+                            </p>
+                            <p className="text-white text-xs md:text-sm text-justify">
+                                Aditanar College of Arts and Science, Tiruchendur
+                            </p>
+                        </div>
                     </div>
                 </div>
+            </div>
+            {/* Certificate */}
+            <div>
+                <h1 className="text-yellow-400 font-medium md:font-bold text-base md:text-xl mt-2">
+                    Certificate
+                </h1>
+                <p className="text-white text-xs mb-1 w-48">Fundamentals of Web Development Program - Feb 8, 2025</p>
+                <a href={Certificate1}>
+                    <img className="w-36 border-[2px] border-yellow-400 rounded-xl" src={Certificate1_Image} alt="certificate_img" />
+                </a>
             </div>
             {/* Link btn */}
             <div className="md:hidden flex gap-5 mt-4 mb-2">
