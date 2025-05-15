@@ -62,6 +62,11 @@ export default function About({ setActiveBtn }) {
                     </div>
                 </div>
             </div>
+            {/* Link btn */}
+            <div className="md:hidden flex gap-5 mt-3">
+                <SocialMediaBtn link="https://www.linkedin.com/in/jovin-roshan-marn-stack-developer" btnStyle={<i className="fa-brands text-xl font-bold fa-linkedin-in" />} />
+                <SocialMediaBtn link="https://www.fiverr.com/jovin_roshan_j" btnStyle="fiverr" />
+            </div>
         </div>
     )
 }
