@@ -12,7 +12,7 @@ export default function Home({setActiveBtn}) {
     )
     return (
         <div style={{ fontFamily: '"Roboto", sans-serif' }} className="relative border-[3px] border-yellow-500 mx-3 md:mx-40 my-2 md:my-8 p-4 bg-slate-900 rounded-3xl md:px-20 md:py-16">
-            <h1 style={{ fontFamily: '"Delius", cursive' }} className="font-medium text-xs md:text-lg absolute top-[-10px] md:top-[-20px] bg-yellow-500 border-[2px] border-white px-2 py-1 rounded-full">Welcome to My Portfolio</h1>
+            <h1 style={{ fontFamily: '"Delius", cursive' }} className="font-bold text-xs md:text-lg absolute top-[-10px] md:top-[-20px] bg-yellow-500 border-[2px] border-white px-2 py-1 rounded-full">Welcome to My Portfolio</h1>
             <div className="flex flex-col md:flex-row justify-between mt-10 items-center gap-6 md:gap-16">
                 <div>
                     <GradientText colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
