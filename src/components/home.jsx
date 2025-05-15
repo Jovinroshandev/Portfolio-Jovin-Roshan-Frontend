@@ -31,7 +31,7 @@ export default function Home({setActiveBtn}) {
                 <img className="w-36 h-36 md:w-56 md:h-56" src={HeadshotImage} alt="headshotpic" />
 
             </div>
-            <p className="md:hidden text-white text-xs py-5">I specialize in building full-stack web applications with React, MongoDB, and Node.js, with a focus on clean code, performance, and user experience.
+            <p className="md:hidden text-white text-xs py-5 text-justify">I specialize in building full-stack web applications with React, MongoDB, and Node.js, with a focus on clean code, performance, and user experience.
                 Currently open to opportunities as a React Developer or MERN Stack Developer.</p>
             <div className="flex justify-between items-center mt-5">
                 <a href={Resume} target="_blank" className="md:hidden bg-gray-200  px-3 py-2 font-medium rounded-full">Download Resume</a>
