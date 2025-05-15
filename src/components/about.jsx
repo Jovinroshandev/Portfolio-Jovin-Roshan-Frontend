@@ -1,5 +1,6 @@
 import SocialMediaBtn from "./social_media_btn"
 import { useEffect } from "react"
+import GradientText from "../GradiText"
 
 export default function About({ setActiveBtn }) {
     // Check Active Btn for Navbar
@@ -24,16 +25,48 @@ export default function About({ setActiveBtn }) {
                             Skill
                         </h1>
                         <div className="flex flex-wrap gap-x-1 gap-y-2 text-sm">
-                            <p className="text-white border-[2px] px-10 py-1 rounded-full"><i className="fa-brands fa-react"/> REACT</p>
-                            <p className="text-white border-[2px] px-10 py-1 rounded-full"><i class="fa-brands fa-node"/> Node JS</p>
-                            <p className="text-white border-[2px] px-10 py-1 rounded-full"><i class="fa-brands fa-html5"/> HTML</p>
-                            <p className="text-white border-[2px] px-10 py-1 rounded-full"><i class="fa-brands fa-css3-alt"/> CSS</p>
-                            <p className="text-white border-[2px] px-10 py-1 rounded-full"><i class="fa-brands fa-js"/> JAVASCRIPT</p>
-                            <p className="text-white border-[2px] px-10 py-1 rounded-full"><span className="font-light">ES</span> EXPRESS JS</p>
-                            <p className="text-white border-[2px] px-10 py-1 rounded-full"><i class="fa-brands fa-envira"/> MongoDB</p>
-                            <p className="text-white border-[2px] px-10 py-1 rounded-full"><i class="fa-brands fa-python"/> PYTHON</p>
-                            <p className="text-white border-[2px] px-10 py-1 rounded-full"><i class="fa-brands fa-git"/> GIT</p>
-                            <p className="text-white border-[2px] px-10 py-1 rounded-full"><i class="fa-brands fa-github"/> GitHub</p>
+                            <GradientText colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
+                                                    animationSpeed={3}
+                                                    showBorder={true}
+                                                    className="custom-className text-white px-10 py-1 rounded-full"><i className="fa-brands fa-react"/> <span className="text-white">REACT</span></GradientText>
+                            <GradientText colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
+                                                    animationSpeed={3}
+                                                    showBorder={true}
+                                                    className="custom-className text-white px-10 py-1 rounded-full"><i class="fa-brands fa-node"/> <span className="text-white">Node JS</span></GradientText>
+                            <GradientText colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
+                                                    animationSpeed={3}
+                                                    showBorder={true}
+                                                    className="custom-className text-white px-10 py-1 rounded-full"><i class="fa-brands fa-html5"/> <span className="text-white">HTML</span></GradientText>
+                            
+                            
+                            <GradientText colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
+                                                    animationSpeed={3}
+                                                    showBorder={true}
+                                                    className="custom-className text-white px-10 py-1 rounded-full"><i class="fa-brands fa-css3-alt"/> <span className="text-white">CSS</span></GradientText>
+                            <GradientText colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
+                                                    animationSpeed={3}
+                                                    showBorder={true}
+                                                    className="custom-className text-white px-10 py-1 rounded-full"><i class="fa-brands fa-js"/> <span className="text-white">JAVASCRIPT</span></GradientText>
+                            <GradientText colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
+                                                    animationSpeed={3}
+                                                    showBorder={true}
+                                                    className="custom-className text-white px-10 py-1 rounded-full"><span className="font-light">ES</span> <span className="text-white">EXPRESS JS</span></GradientText>
+                            <GradientText colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
+                                                    animationSpeed={3}
+                                                    showBorder={true}
+                                                    className="custom-className text-white px-10 py-1 rounded-full"><i class="fa-brands fa-envira"/> <span className="text-white">MongoDB</span></GradientText>
+                            <GradientText colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
+                                                    animationSpeed={3}
+                                                    showBorder={true}
+                                                    className="custom-className text-white px-10 py-1 rounded-full"><i class="fa-brands fa-python"/> <span className="text-white">PYTHON</span></GradientText>
+                            <GradientText colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
+                                                    animationSpeed={3}
+                                                    showBorder={true}
+                                                    className="custom-className text-white px-10 py-1 rounded-full"><i class="fa-brands fa-git"/> <span className="text-white">GIT</span></GradientText>
+                            <GradientText colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
+                                                    animationSpeed={3}
+                                                    showBorder={true}
+                                                    className="custom-className text-white px-10 py-1 rounded-full"><i class="fa-brands fa-github"/> <span className="text-white">GitHub</span></GradientText>
                         </div>
                     </div>
                     {/* Experience */}

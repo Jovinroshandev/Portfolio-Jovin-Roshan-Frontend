@@ -29,7 +29,10 @@ export default function Home({ setActiveBtn }) {
                     </div>
                     <div className="mt-5 font-medium hidden md:flex md:gap-10">
                         <a href={Resume} target="_blank" className="border-[2px] hover:bg-gray-900 hover:text-white hover:border-white bg-gray-200  text-black px-8 py-2  rounded-full">View Resume</a>
-                        <a href={Resume} target="_blank" download className="border-[2px] text-white hover:bg-yellow-400 hover:text-black px-3 py-2 rounded-full">Download Resume</a>
+                        <GradientText colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
+                        animationSpeed={3}
+                        showBorder={true}
+                        className="custom-className"><a href={Resume} target="_blank" download className="text-white px-3 py-2 rounded-full">Download Resume</a></GradientText>
                     </div>
                 </div>
 
