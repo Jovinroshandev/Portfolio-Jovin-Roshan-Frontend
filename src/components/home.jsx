@@ -18,8 +18,8 @@ export default function Home({setActiveBtn}) {
                     <GradientText colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
                         animationSpeed={3}
                         showBorder={false}
-                        className="custom-className"><p className="text-2xl md:text-4xl">Jovin Roshan</p></GradientText>
-                    <h1 style={{ fontFamily: '"Space Grotesk", sans-serif' }} className="text-white  text-xs md:text-lg font-light">MERN STACK DEVELOPER</h1>
+                        className="custom-className"><p className="text-4xl">Jovin Roshan</p></GradientText>
+                    <h1 style={{ fontFamily: '"Space Grotesk", sans-serif' }} className="text-white  text-lg md:text-lg font-light">MERN STACK DEVELOPER</h1>
                     <p className="hidden md:block text-white text-lg pt-5">I specialize in building full-stack web applications with React, MongoDB, and Node.js, with a focus on clean code, performance, and user experience.
                         Currently open to opportunities as a React Developer or MERN Stack Developer.</p>
                     <div className="mt-5 font-medium hidden md:flex md:gap-10">
@@ -28,7 +28,7 @@ export default function Home({setActiveBtn}) {
                     </div>
                 </div>
 
-                <img className="w-36 h-36 md:w-56 md:h-56" src={HeadshotImage} alt="headshotpic" />
+                <img className="w-48 h-48 md:w-56 md:h-56" src={HeadshotImage} alt="headshotpic" />
 
             </div>
             <p className="md:hidden text-white text-xs py-5 text-justify">I specialize in building full-stack web applications with React, MongoDB, and Node.js, with a focus on clean code, performance, and user experience.
