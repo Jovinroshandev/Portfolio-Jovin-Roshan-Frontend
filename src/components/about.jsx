@@ -13,14 +13,14 @@ export default function About({ setActiveBtn }) {
         <div style={{ fontFamily: '"Roboto", sans-serif' }} className="relative border-[3px] border-yellow-500 mx-3 md:mx-40 my-2 md:my-4 px-4 py-6 bg-slate-900 rounded-3xl md:px-10 md:py-5">
             <h1 style={{ fontFamily: '"Delius", cursive' }} className="font-medium text-xs md:text-lg absolute top-[-10px] md:top-[-20px] bg-yellow-500 border-[2px] border-white px-2 py-1 rounded-full">About</h1>
             <div className="flex flex-col md:flex-row gap-2 md:gap-10 items-center">
-                <div className="mt-1 md:mt-2">
+                <div className="mt-4 md:mt-2">
                     {/* About me */}
                     <div>
                         <h1 className="text-yellow-400 md:text-xl md:font-bold font-medium">About Me</h1>
                         <h1 className="text-white md:text-lg text-xs text-justify">Hi! I'm a passionate <span className="font-semibold">MERN Stack Developer</span> with a strong focus on building fast, scalable, and user-friendly web applications. I specialize in React.js, Express.js, MongoDB, and Node.js, and enjoy turning ideas into real-world applications with clean code and modern UI design.</h1>
                     </div>
                     {/* Skill */}
-                    <div className="mt-2 md:mt-3">
+                    <div className="mt-4 md:mt-3">
                         <h1 className="text-yellow-400 font-medium md:font-bold text-base md:text-xl">
                             Skill
                         </h1>
@@ -70,7 +70,7 @@ export default function About({ setActiveBtn }) {
                         </div>
                     </div>
                     {/* Experience */}
-                    <div className="mt-2 md:mt-3">
+                    <div className="mt-4 md:mt-3">
                         <h1 className="text-yellow-400 font-medium md:font-bold text-base md:text-xl">
                             Professional Experience
                         </h1>
@@ -82,7 +82,7 @@ export default function About({ setActiveBtn }) {
                         </p>
                     </div>
                     {/* Education Qualification */}
-                    <div className="mt-2 md:mt-3">
+                    <div className="mt-4 md:mt-3">
                         <h1 className="text-yellow-400 font-medium md:font-bold text-base md:text-xl">
                             Education Qualification
                         </h1>
