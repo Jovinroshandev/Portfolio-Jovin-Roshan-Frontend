@@ -46,7 +46,7 @@ export default function Home({ setActiveBtn }) {
                 <p className="border-[2px] mx-10 text-center text-yellow-200 border-yellow-400 p-1 rounded-full"><i class="fa-solid fa-envelope pr-2"></i> jovin.roshan.dev@gmail.com</p>
                 <p className="border-[2px] mx-16 text-center text-yellow-200 border-yellow-400 p-1 rounded-full"><i class="fa-solid fa-phone-volume pr-2"></i> +91 8925164487</p>
             </div>
-            <div className="flex justify-between items-center mt-5">
+            <div className="flex justify-between items-center mt-4">
                 <a href={Resume} target="_blank" className="md:hidden bg-gray-200  px-3 py-2 font-medium rounded-full">Download Resume</a>
                 <div className="flex gap-5">
                     <SocialMediaBtn link="https://www.linkedin.com/in/jovin-roshan-marn-stack-developer" btnStyle={<i className="fa-brands text-xl font-bold fa-linkedin-in" />} />
