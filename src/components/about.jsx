@@ -76,7 +76,7 @@ export default function About({ setActiveBtn }) {
                             Skill
                         </h1>
                         <div className="flex md:flex-col text-xs md:text-lg md:mt-1">
-                            <div className="flex flex-wrap gap-2 ">
+                            <div className="grid grid-cols-2 md:grid-cols-5 gap-y-2">
                                 {skillList.map((item,index)=><SkillBtn key={index} btnValue={item.name} icon={item.icon}/>)}
                             </div>
                         </div>

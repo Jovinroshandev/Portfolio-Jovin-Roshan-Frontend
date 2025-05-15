@@ -20,7 +20,7 @@ const LinkBtn =()=>{
             },
         ]
         return(
-            <div className="text-xs flex  flex-col gap-y-2 items-center mt-1">
+            <div className="text-xs flex  flex-col gap-y-2 items-center">
                 {datas.map((data, index)=>(<p key={index} className="border-[2px] w-fit px-5  text-yellow-200 border-yellow-400 p-1 rounded-full"><i className={data.icon} /> {data.value}</p>))}
             </div>
         )
@@ -36,13 +36,13 @@ export default function Home({ setActiveBtn }) {
     return (
         <div style={{ fontFamily: '"Roboto", sans-serif' }} className="relative border-[3px] border-yellow-500 mx-3 md:mx-40 my-2 md:my-4 p-4 bg-slate-900 rounded-3xl md:px-10 md:py-10">
             <h1 style={{ fontFamily: '"Delius", cursive' }} className="font-bold text-xs md:text-lg absolute top-[-10px] md:top-[-20px] bg-yellow-500 border-[2px] border-white px-2 py-1 rounded-full">Welcome to My Portfolio</h1>
-            <div className="flex flex-col md:flex-row justify-between mt-5 md:mt-4 items-center gap-6 md:gap-16">
+            <div className="flex flex-col md:flex-row justify-between mt-2 md:mt-4 items-center gap-2 md:gap-16">
                 <div>
                     <GradientText colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
                         animationSpeed={3}
                         showBorder={false}
-                        className="custom-className"><p className="text-4xl">Jovin Roshan</p></GradientText>
-                    <h1 style={{ fontFamily: '"Space Grotesk", sans-serif' }} className="text-white  text-lg md:text-lg font-light">MERN STACK DEVELOPER</h1>
+                        className="custom-className"><p className="text-2xl md:text-4xl">Jovin Roshan</p></GradientText>
+                    <h1 style={{ fontFamily: '"Space Grotesk", sans-serif' }} className="text-white  text-xs md:text-lg font-light">MERN STACK DEVELOPER</h1>
                     <p className="hidden md:block text-white text-lg pt-5">I specialize in building full-stack web applications with React, MongoDB, and Node.js, with a focus on clean code, performance, and user experience.
                         Currently open to opportunities as a React Developer or MERN Stack Developer.</p>
                     <div className="hidden md:flex text-sm  gap-5 mt-5 mb-10">
@@ -62,7 +62,7 @@ export default function Home({ setActiveBtn }) {
                 <img className="w-48 h-48 md:w-56 md:h-56" src={HeadshotImage} alt="headshotpic" />
 
             </div>
-            <p className="md:hidden text-white text-xs py-5 text-justify">I specialize in building full-stack web applications with React, MongoDB, and Node.js, with a focus on clean code, performance, and user experience.
+            <p className="md:hidden text-white text-xs py-3 text-justify">I specialize in building full-stack web applications with React, MongoDB, and Node.js, with a focus on clean code, performance, and user experience.
                 Currently open to opportunities as a React Developer or MERN Stack Developer.</p>
             <div className="md:hidden">
                 <LinkBtn/>
