@@ -31,9 +31,13 @@ export default function Home({setActiveBtn}) {
                 <img className="w-48 h-48 md:w-56 md:h-56" src={HeadshotImage} alt="headshotpic" />
 
             </div>
+            <div className="text-white text-xs flex justify-between mt-5">
+                <p className="border-[2px] text-yellow-200 border-yellow-400 p-1 rounded-full"><span className="font-semibold">Location</span> Chennai</p>
+                <p className="border-[2px] text-yellow-200 border-yellow-400 p-1 rounded-full"><span className="font-semibold">Email</span> jovin.roshan.dev@gmail.com</p>
+            </div>
             <p className="md:hidden text-white text-xs py-5 text-justify">I specialize in building full-stack web applications with React, MongoDB, and Node.js, with a focus on clean code, performance, and user experience.
                 Currently open to opportunities as a React Developer or MERN Stack Developer.</p>
-            <div className="flex justify-between items-center mt-28">
+            <div className="flex justify-between items-center mt-5">
                 <a href={Resume} target="_blank" className="md:hidden bg-gray-200  px-3 py-2 font-medium rounded-full">Download Resume</a>
                 <div className="flex gap-5">
                     <SocialMediaBtn link="https://www.linkedin.com/in/jovin-roshan-marn-stack-developer" btnStyle={<i className="fa-brands text-xl font-bold fa-linkedin-in" />} />
