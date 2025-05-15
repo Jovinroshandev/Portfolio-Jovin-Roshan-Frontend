@@ -117,12 +117,16 @@ export default function About({ setActiveBtn }) {
                     Certificate
                 </h1>
                 <p className="text-white text-xs mb-1 w-48">Fundamentals of Web Development Program - Feb 8, 2025</p>
-                <a href={Certificate1}>
-                    <div className="glow-border w-fit p-[2px] rounded-xl">
-                        <img className="rounded-lg w-36 block" src={Certificate1_Image} alt="certificate_img" />
-                    </div>
+                <div className="glow-border w-fit p-[2px] rounded-xl">
+                    <a href={Certificate1} target="_blank" rel="noopener noreferrer">
+                        <img
+                            className="rounded-lg w-36 block"
+                            src={Certificate1_Image}
+                            alt="certificate_img"
+                        />
+                    </a>
+                </div>
 
-                </a>
             </div>
             {/* Link btn */}
             <div className="md:hidden flex gap-5 mt-4 mb-2">
