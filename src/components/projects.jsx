@@ -9,6 +9,7 @@ import NumberGussingVideo from "../assets/project_image/Number-Gussing_Game.mp4"
 import PerfumyReactAppVideo from "../assets/project_image/Perfumy_React_Project.mp4"
 import LoveTailVideo from "../assets/project_image/LoveTail-Tailwind-Project.mp4"
 import TripAdvisorVideo from "../assets/project_image/tripadvicer.mp4"
+import UdemyCloneVideo from "../assets/project_image/UdemyCloneWebsite.mp4"
 export default function Project({ setActiveBtn }) {
     useEffect(
         () => {
@@ -80,6 +81,13 @@ export default function Project({ setActiveBtn }) {
             demoLink:"https://trip-advisor-rust.vercel.app/",
             Video:TripAdvisorVideo
         },
+        {
+            projectName:"Udemy Clone Website",
+            description:"A fully responsive online learning platform built with React, replicating the core features of Udemy. It showcases course listings, categories, and a modern UI with intuitive navigation. Designed to provide a seamless user experience across all devices",
+            githubLink:"https://github.com/Jovinroshandev/Udemy-Clone-React",
+            demoLink:"https://udemy-clone-react-uhup.vercel.app/",
+            Video:UdemyCloneVideo
+        },
     ]
 
     const ProjectCard = (props) => {
@@ -99,7 +107,7 @@ export default function Project({ setActiveBtn }) {
     return (
         <div style={{ fontFamily: '"Roboto", sans-serif' }} className="relative border-[3px] border-yellow-500 mx-3 md:mx-40 my-2 md:my-3 px-4 py-5 bg-slate-900 rounded-3xl md:px-10 md:py-5">
             <h1 style={{ fontFamily: '"Delius", cursive' }} className="font-bold text-xs md:text-lg absolute top-[-10px] md:top-[-20px] bg-yellow-500 border-[2px] border-white px-2 py-1 rounded-full">Project</h1>
-            <div className="mt-5 flex flex-col md:flex-row md:flex-wrap md:gap-x-10 md:gap-y-8 gap-6 items-center">
+            <div className="mt-5 flex flex-col md:flex-row md:flex-wrap md:gap-x-9 md:gap-y-8 gap-6 items-center">
                 {projectData.map((data)=>(
                     <ProjectCard 
                     projectName={data.projectName} 
