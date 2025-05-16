@@ -63,7 +63,7 @@ export default function About({ setActiveBtn }) {
     }
 
     return (
-        <div style={{ fontFamily: '"Roboto", sans-serif' }} className="relative border-[3px] border-yellow-500 mx-3 md:mx-40 my-2 md:my-4 px-4 py-5 bg-slate-900 rounded-3xl md:px-10 md:py-5">
+        <div style={{ fontFamily: '"Roboto", sans-serif' }} className="relative border-[3px] border-yellow-500 mx-3 md:mx-40 my-2 md:my-3 px-4 py-5 bg-slate-900 rounded-3xl md:px-10 md:py-0 md:pt-5 md:pb-4">
             <h1 style={{ fontFamily: '"Delius", cursive' }} className="font-bold text-xs md:text-lg absolute top-[-10px] md:top-[-20px] bg-yellow-500 border-[2px] border-white px-2 py-1 rounded-full">About</h1>
             <div className="flex flex-col md:flex-row gap-2 md:gap-10 items-center">
                 <div className="mt-4 md:mt-2">
@@ -119,14 +119,9 @@ export default function About({ setActiveBtn }) {
                 <p className="text-white text-xs mb-1 w-48">Fundamentals of Web Development Program - Feb 8, 2025</p>
                 <div className="glow-border w-fit p-[2px] rounded-xl">
                     <a href={Certificate1} target="_blank" rel="noopener noreferrer">
-                        <img
-                            className="rounded-lg w-36 block"
-                            src={Certificate1_Image}
-                            alt="certificate_img"
-                        />
+                        <img className="rounded-lg w-36 block" src={Certificate1_Image} alt="certificate_img"/>
                     </a>
                 </div>
-
             </div>
             {/* Link btn */}
             <div className="md:hidden flex gap-5 mt-4 mb-2">
