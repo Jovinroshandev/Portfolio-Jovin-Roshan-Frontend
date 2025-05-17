@@ -5,7 +5,6 @@ import {motion} from "framer-motion"
 import BuilkMailGIF from "../assets/project_videos/BulkMailGIF.gif";
 import QuizAppGIF from "../assets/project_videos/QuizAppGIF.gif";
 import WeatherAppGIF from "../assets/project_videos/WeatherGIF.gif";
-import ToDoListGIF from "../assets/project_videos/TODOGIF.gif";
 import ReactLoginAppGIF from "../assets/project_videos/LoginPageGIF.gif";
 import NumberGussingGIF from "../assets/project_videos/RandomNumberFindGIF.gif";
 import PerfumyReactAppGIF from "../assets/project_videos/PerfumyGIF.gif";
@@ -34,14 +33,6 @@ export default function Project({ setActiveBtn }) {
       githubLink: "https://github.com/Jovinroshandev/WeatherApp",
       demoLink: "https://weather-app-theta-sooty.vercel.app/",
       GIF:WeatherAppGIF,
-    },
-    {
-      projectName: "TODO Task Manager",
-      description:
-        "A simple and responsive to-do list app to manage daily tasks. Built with React, Tailwind CSS, JavaScript, and CSS.",
-      githubLink: "https://github.com/Jovinroshandev/taskManager",
-      demoLink: "https://task-manager-brown-theta.vercel.app/",
-      GIF:ToDoListGIF,
     },
     {
       projectName: "Quiz App",
