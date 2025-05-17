@@ -17,7 +17,7 @@ export default function Contact({ setActiveBtn }) {
         }, [setActiveBtn]
     )
     const handleName = (e)=>(
-        setName(e.target.value)
+        SetName(e.target.value)
     )
     const handlePhoneNumber = (e)=>(
         setPhoneNumber(e.target.value)
