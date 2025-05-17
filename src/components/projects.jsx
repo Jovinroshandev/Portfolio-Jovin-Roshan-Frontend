@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 import SocialMediaBtn from "./social_media_btn";
-
+import {motion} from "framer-motion"
 // Import videos
 import BuilkMailVideo from "../assets/project_image/bulk-mail-application.mp4";
 import QuizAppVideo from "../assets/project_image/QuizApp.mp4";
@@ -102,7 +102,13 @@ export default function Project({ setActiveBtn }) {
     },
   ];
 
-  const ProjectCard = ({ projectName, description, githubLink, demoLink, Video }) => {
+  const ProjectCard = ({
+    projectName,
+    description,
+    githubLink,
+    demoLink,
+    Video,
+  }) => {
     const { ref, inView } = useInView({
       triggerOnce: true,
       threshold: 0.1,
@@ -113,7 +119,9 @@ export default function Project({ setActiveBtn }) {
         ref={ref}
         className="bg-gray-100 border w-fit h-96 p-2 rounded-2xl flex flex-col justify-between"
       >
-        <h1 className="text-center text-lg my-1 font-medium text-red-500">{projectName}</h1>
+        <h1 className="text-center text-lg my-1 font-medium text-red-500">
+          {projectName}
+        </h1>
         {inView ? (
           <video
             className="w-60 h-fit rounded-lg"
@@ -160,7 +168,14 @@ export default function Project({ setActiveBtn }) {
       >
         Project
       </h1>
-      <div className="mt-5 flex flex-col md:flex-row md:flex-wrap md:gap-x-9 md:gap-y-8 gap-6 items-center">
+      <motion.div initial={{opacity:0,y:20}}
+      animate={{opacity:1,y:0}}
+      transition={{
+        type:"spring",
+        stiffness:300,
+        damping:5
+      }}>
+        <div className="mt-5 flex flex-col md:flex-row md:flex-wrap md:gap-x-9 md:gap-y-8 gap-6 items-center">
         {projectData.map((data, index) => (
           <ProjectCard
             key={index}
@@ -176,14 +191,20 @@ export default function Project({ setActiveBtn }) {
       <div className="md:hidden flex gap-5 mt-4 mb-1">
         <SocialMediaBtn
           link="https://www.linkedin.com/in/jovin-roshan-marn-stack-developer"
-          btnStyle={<i className="fa-brands text-xl font-bold fa-linkedin-in" />}
+          btnStyle={
+            <i className="fa-brands text-xl font-bold fa-linkedin-in" />
+          }
         />
-        <SocialMediaBtn link="https://www.fiverr.com/jovin_roshan_j" btnStyle="fiverr" />
+        <SocialMediaBtn
+          link="https://www.fiverr.com/jovin_roshan_j"
+          btnStyle="fiverr"
+        />
         <SocialMediaBtn
           link="https://github.com/Jovinroshandev"
           btnStyle={<i className="fa-brands fa-github"></i>}
         />
       </div>
+      </motion.div>
     </div>
   );
 }

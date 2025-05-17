@@ -4,6 +4,8 @@ import GradientText from "../GradiText"
 import GlowText from "./glowtext"
 import Certificate1 from "../assets/certificate/Fundamentals_of_Web_Development_Program_Feb_8_2025.pdf"
 import Certificate1_Image from "../assets/certificate/Certificate1_image.png"
+import {motion} from "framer-motion"
+
 
 export default function About({ setActiveBtn }) {
     // Check Active Btn for Navbar
@@ -65,6 +67,14 @@ export default function About({ setActiveBtn }) {
     return (
         <div style={{ fontFamily: '"Roboto", sans-serif' }} className="relative border-[3px] border-yellow-500 mx-3 md:mx-40 my-2 md:my-3 px-4 py-5 bg-slate-900 rounded-3xl md:px-10 md:py-0 md:pt-5 md:pb-4">
             <h1 style={{ fontFamily: '"Delius", cursive' }} className="font-bold text-xs md:text-lg absolute top-[-10px] md:top-[-20px] bg-yellow-500 border-[2px] border-white px-2 py-1 rounded-full">About</h1>
+            <motion.div
+            initial={{opacity:0,y:10}}
+            animate={{opacity:1,y:0}}
+            transition={{
+                type:"spring",
+                damping:5,
+                stiffness:300
+            }}>
             <div className="flex flex-col md:flex-row gap-2 md:gap-10 items-center">
                 <div className="mt-4 md:mt-2">
                     {/* About me */}
@@ -129,6 +139,7 @@ export default function About({ setActiveBtn }) {
                 <SocialMediaBtn link="https://www.fiverr.com/jovin_roshan_j" btnStyle="fiverr" />
                 <SocialMediaBtn link="https://github.com/Jovinroshandev" btnStyle={<i className="fa-brands fa-github"></i>} />
             </div>
+            </motion.div>
         </div>
     )
 }
