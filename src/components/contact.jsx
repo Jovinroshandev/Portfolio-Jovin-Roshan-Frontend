@@ -66,7 +66,7 @@ export default function Contact({ setActiveBtn }) {
                         <textarea onChange={handleMsg} value={msg} className="bg-transparent w-[100%] border-b-2 border-yellow-400 outline-none" type="text" required />
                     </div>
                     <div className="flex justify-center">
-                        <button onClick={handleSend} className="bg-yellow-400 text-xs rounded-xl text-black font-medium px-8 py-1">Send</button>
+                        <button className="bg-yellow-400 text-xs rounded-xl text-black font-medium px-8 py-1">Send</button>
                     </div>
                 </motion.div>
 
