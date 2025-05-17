@@ -3,16 +3,16 @@ import { useInView } from "react-intersection-observer";
 import SocialMediaBtn from "./social_media_btn";
 import {motion} from "framer-motion"
 // Import videos
-import BuilkMailVideo from "../assets/project_image/bulk-mail-application.mp4";
-import QuizAppVideo from "../assets/project_image/QuizApp.mp4";
-import WeatherAppVideo from "../assets/project_image/Weather_React_Application.mp4";
-import ToDoListVideo from "../assets/project_image/ToDoListApp.mp4";
-import ReactLoginAppVideo from "../assets/project_image/login_page_react_application.mp4";
-import NumberGussingVideo from "../assets/project_image/Number-Gussing_Game.mp4";
-import PerfumyReactAppVideo from "../assets/project_image/Perfumy_React_Project.mp4";
-import LoveTailVideo from "../assets/project_image/LoveTail-Tailwind-Project.mp4";
-import TripAdvisorVideo from "../assets/project_image/tripadvicer.mp4";
-import UdemyCloneVideo from "../assets/project_image/UdemyCloneWebsite.mp4";
+import BuilkMailVideo from "../assets/project_videos/bulk-mail-application.mp4";
+import QuizAppVideo from "../assets/project_videos/QuizApp.mp4";
+import WeatherAppVideo from "../assets/project_videos/Weather_React_Application.mp4";
+import ToDoListVideo from "../assets/project_videos/ToDoListApp.mp4";
+import ReactLoginAppVideo from "../assets/project_videos/login_page_react_application.mp4";
+import NumberGussingVideo from "../assets/project_videos/Number-Gussing_Game.mp4";
+import PerfumyReactAppVideo from "../assets/project_videos/Perfumy_React_Project.mp4";
+import LoveTailVideo from "../assets/project_videos/LoveTail-Tailwind-Project.mp4";
+import TripAdvisorVideo from "../assets/project_videos/tripadvicer.mp4";
+import UdemyCloneVideo from "../assets/project_videos/UdemyCloneWebsite.mp4";
 
 export default function Project({ setActiveBtn }) {
   useEffect(() => {
