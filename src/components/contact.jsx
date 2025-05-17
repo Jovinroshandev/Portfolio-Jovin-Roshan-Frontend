@@ -45,12 +45,14 @@ export default function Contact({ setActiveBtn }) {
            
 
             {/* Link btn */}
+            <div className="flex flex-col justify-center items-center gap-2 mt-4">
+                <GlowText><p className="text-xs border border-yellow-300 rounded-full p-1"><i class="fa-solid fa-envelope-circle-check text-sm"></i> jovin.roshan.dev@gmail.com</p></GlowText>
+                <GlowText><p className="text-xs border border-yellow-300 rounded-full p-1"><i class="fa-solid fa-phone-volume"></i> +918925164487</p></GlowText>
+            </div>
             <div className="md:hidden flex gap-2 mt-4 mb-1 justify-center items-center">
                 <SocialMediaBtn link="https://www.linkedin.com/in/jovin-roshan-marn-stack-developer" btnStyle={<i className="fa-brands text-xl font-bold fa-linkedin-in" />} />
                 <SocialMediaBtn link="https://www.fiverr.com/jovin_roshan_j" btnStyle="fiverr" />
                 <SocialMediaBtn link="https://github.com/Jovinroshandev" btnStyle={<i class="fa-brands fa-github"></i>} />
-                <GlowText><p className="text-xs border border-yellow-300 rounded-full p-1"><i class="fa-solid fa-envelope-circle-check text-sm"></i> jovin.roshan.dev@gmail.com</p></GlowText>
-                <GlowText><p className="text-xs border border-yellow-300 rounded-full p-1"><i class="fa-solid fa-phone-volume"></i> +918925164487</p></GlowText>
             </div>
         </div>
     )
