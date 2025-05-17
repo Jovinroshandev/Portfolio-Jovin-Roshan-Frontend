@@ -52,6 +52,18 @@ export default function About({ setActiveBtn }) {
             name: "Python",
             icon: "fa-brands fa-python"
         },
+        {
+            name: "Postman",
+            icon: "fa-solid fa-paper-plane"
+        },
+        {
+            name: "Git",
+            icon: "fa-brands fa-git"
+        },
+        {
+            name: "GitHub",
+            icon: "fa-brands fa-github"
+        },
 
     ]
 
