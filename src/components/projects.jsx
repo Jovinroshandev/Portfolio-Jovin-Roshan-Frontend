@@ -99,7 +99,7 @@ export default function Project({ setActiveBtn }) {
     demoLink,
     GIF,
   }) => (
-    <div className="bg-gray-100 border w-fit h-80 p-2git rounded-2xl flex flex-col justify-between">
+    <div className="bg-gray-100 border w-fit h-80 p-2 rounded-2xl flex flex-col justify-between">
       <div>
         <img className="w-60 h-fit rounded-lg" src={GIF} alt="gif"/>
       <h1 className="text-center text-lg my-1 font-medium text-red-500">
