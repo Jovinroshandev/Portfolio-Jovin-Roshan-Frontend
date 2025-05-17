@@ -82,7 +82,7 @@ export default function Home({ setActiveBtn }) {
                     </div>
                 </motion.div>
 
-                <img className="w-48 h-48 md:w-56 md:h-56" src={HeadshotImage} alt="headshotpic" />
+                <img className="w-44 h-48 md:w-72 md:h-64 rounded-full bg-slate-800 border-[4px] border-yellow-400" src={HeadshotImage} alt="headshotpic" />
 
             </div>
             <p className="md:hidden text-white text-xs py-3 text-justify">I specialize in building full-stack web applications with React, MongoDB, and Node.js, with a focus on clean code, performance, and user experience.
