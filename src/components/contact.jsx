@@ -4,6 +4,8 @@ import GlowText from "./glowtext"
 import {motion} from "framer-motion"
 import { useState } from "react"
 import axios from "axios"
+import Resume from "../assets/resume/Jovin_Roshan_Marn_Stack_Developer_Updated.pdf"
+import GradientText from "../GradiText"
 
 export default function Contact({ setActiveBtn }) {
     const [name,SetName] = useState("")
@@ -84,8 +86,14 @@ export default function Contact({ setActiveBtn }) {
 
             {/* Link btn */}
             <div className="flex flex-col justify-center items-center gap-2 mt-4">
-                <GlowText><p className="text-xs border border-yellow-300 rounded-full p-1"><i className="fa-solid fa-envelope-circle-check text-sm"></i> jovin.roshan.dev@gmail.com</p></GlowText>
-                <GlowText><p className="text-xs border border-yellow-300 rounded-full p-1"><i className="fa-solid fa-phone-volume"></i> +918925164487</p></GlowText>
+                <GradientText colors={["#5DE2E7", "#E2EAF4", "#5DE2E7", "#E2EAF4", "#5DE2E7"]}
+                            animationSpeed={3}
+                            showBorder={true}
+                            className="custom-className px-4">
+                            <a href={Resume} download="JOVIN_ROSHAN_MERN_STACK_REACT_DEVELOPER_RESUME" className=" text-xs">Download Resume</a>
+                </GradientText>
+                <GlowText><p className="text-xs  rounded-full p-1"><i className="fa-solid fa-envelope-circle-check text-sm"></i> jovin.roshan.dev@gmail.com</p></GlowText>
+                <GlowText><p className="text-xs  rounded-full p-1"><i className="fa-solid fa-phone-volume"></i> +918925164487</p></GlowText>
             </div>
             <div className="md:hidden flex gap-2 mt-4 mb-1 justify-center items-center">
                 <SocialMediaBtn link="https://www.linkedin.com/in/jovin-roshan-marn-stack-developer" btnStyle={<i className="fa-brands text-xl font-bold fa-linkedin-in" />} />
