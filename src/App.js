@@ -13,7 +13,7 @@ export default function App() {
   return (
     <div>
       <BrowserRouter>
-        {/* <VantaBirdsBackground /> */}
+        <VantaBirdsBackground />
         <div className="py-3">
           <Navbar activeBtn={activeBtn} />
         </div>
