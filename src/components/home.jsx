@@ -13,7 +13,7 @@ const LinkBtn = () => {
         },
         {
             value: "jovin.roshan.dev@gmail.com",
-            icon: "fa-solid fa-at pr-2"
+            icon: "fa-solid fa-envelope pr-2"
         },
         {
             value: "+91 8925164487",
