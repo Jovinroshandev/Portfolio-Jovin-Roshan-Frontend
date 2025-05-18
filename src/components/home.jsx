@@ -5,6 +5,7 @@ import SocialMediaBtn from "./social_media_btn"
 import { useEffect } from "react"
 import { motion } from "framer-motion"
 import Typewriter from "typewriter-effect"
+
 const LinkBtn = () => {
     const datas = [
         {
