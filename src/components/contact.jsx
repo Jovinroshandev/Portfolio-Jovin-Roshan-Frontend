@@ -1,12 +1,10 @@
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
+import { motion } from "framer-motion"
+import axios from "axios"
 import SocialMediaBtn from "./social_media_btn"
 import GlowText from "./glowtext"
-import { motion } from "framer-motion"
-import { useState } from "react"
-import axios from "axios"
 import Resume from "../assets/resume/Jovin_Roshan_Marn_Stack_Developer_Updated.pdf"
 import GradientText from "../GradiText"
-import { toast } from 'react-toastify';
 
 export default function Contact({ setActiveBtn }) {
     const [name, setName] = useState("")
@@ -16,18 +14,27 @@ export default function Contact({ setActiveBtn }) {
     const [submitActive, setActiveSubmit] = useState(false)
     const [emailAlert, setEmailAlert] = useState(false)
     const [loading, setLoading] = useState(false);
+    const [sendMsgStatus, setSendMsgStatus] = useState(false)
     const isValidEmail = (email) => /\S+@\S+\.\S+/.test(email);
 
     useEffect(() => {
-        if (email.length>=1){
+        if (email.length >= 1) {
             if (isValidEmail(email)) {
-            setEmailAlert(false)
-        }
-        else {
-            setEmailAlert(true)
-        }
+                setEmailAlert(false)
+            }
+            else {
+                setEmailAlert(true)
+            }
         }
     }, [email])
+
+    // message send successfull status
+    useEffect(() => {
+        if (sendMsgStatus) {
+            const timer = setTimeout(() => setSendMsgStatus(false), 5000); // 5 seconds
+            return () => clearTimeout(timer);
+        }
+    }, [sendMsgStatus]);
 
 
     useEffect(() => {
@@ -47,88 +54,115 @@ export default function Contact({ setActiveBtn }) {
     const handleName = (e) => setName(e.target.value)
     const handlePhoneNumber = (e) => setPhoneNumber(e.target.value)
     const handleEmail = (e) => setEmail(e.target.value)
-    
+
     const handleMsg = (e) => setMsg(e.target.value)
     const CONTACT_API__URI = process.env.REACT_APP_CONTACT_URI
     const handleSend = async () => {
         try {
+            setLoading(true);
             await axios.post(CONTACT_API__URI, {
                 name: name.trim(),
                 phoneNumber: phoneNumber.trim(),
                 email: email.trim(),
                 msg: msg.trim()
-            })
+            });
 
-            toast.success("Message sent successfully!");
+            console.log("Successfully Sent");
+            setSendMsgStatus(true); // ✅ this is the correct setter function
             setName("");
             setEmail("");
             setPhoneNumber("");
             setMsg("");
         } catch (error) {
             console.error("Error sending message:", error);
-            toast.error("Failed to send message.");
-        } finally{setLoading(false)}
+            console.log("Failed to send message.");
+        } finally {
+            setLoading(false);
+        }
     };
+
 
     return (
         <div style={{ fontFamily: '"Roboto", sans-serif' }} className="relative border-[3px] border-yellow-500 mx-3 md:mx-40 my-2 md:my-3 px-4 py-5 bg-slate-900 rounded-3xl md:px-10 md:py-5">
             <h1 style={{ fontFamily: '"Delius", cursive' }} className="font-bold text-xs md:text-lg absolute top-[-10px] md:top-[-20px] bg-yellow-500 border-[2px] border-white px-2 py-1 rounded-full">Contact</h1>
 
             {/* Contact Form */}
-            <div className="flex justify-center mt-3">
-                <motion.div className="bg-gray-800 rounded-xl p-8 text-white flex flex-col gap-10 w-96"
+            {sendMsgStatus && (
+                <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: 10 }}
                     transition={{
                         type: "spring",
-                        damping: 5,
-                        stiffness: 300
-                    }}>
-                    <div>
-                        <h2 className="text-yellow-300 font-medium md:font-bold md:text-lg ">Get in touch</h2>
-                        <p className="text-xs text-gray-300">simply fill out the contact form below, and I’ll get back to you as soon as possible!</p>
-                    </div>
-                    <div>
-                        <p className="text-xs text-gray-300">Name *</p>
-                        <input onChange={handleName} value={name} className="bg-transparent w-[100%] border-b-2 border-yellow-400 outline-none" type="text" required />
-                    </div>
-                    <div>
-                        <p className="text-xs text-gray-300">Phone Number (Optional)</p>
-                        <input onChange={handlePhoneNumber} value={phoneNumber} className="bg-transparent w-[100%] border-b-2 border-yellow-400 outline-none" type="text" />
-                    </div>
-                    <div>
-                        <p className="text-xs text-gray-300">Email Address *</p>
-                        <input
-                            onChange={handleEmail}
-                            onBlur={() => setEmailAlert(!isValidEmail(email))}
-                            value={email}
-                            className="bg-transparent w-full border-b-2 border-yellow-400 outline-none"
-                            type="email"
-                            required
-                        />
-                        {emailAlert && (
-                            <p className="text-xs text-red-400 pt-1">
-                                Invalid Email Address. Please Try Again!
-                            </p>
-                        )}
+                        stiffness: 200,
+                        damping: 3,
+                    }}
+                    className="flex justify-center"
+                >
+                    <h1 className="bg-green-300 w-fit px-6 md:px-32 py-3 rounded-xl text-green-900 text-center text-sm md:text-base shadow-lg shadow-green-400/50">
+                        ✅ Message Sent Successfully!
+                    </h1>
+                </motion.div>
+            )}
 
-                    </div>
-                    <div>
-                        <p className="text-xs text-gray-300">Message *</p>
-                        <textarea onChange={handleMsg} value={msg} className="bg-transparent w-[100%] border-b-2 border-yellow-400 outline-none" required />
-                    </div>
-                    <div className="flex justify-center">
-                        <button
-                            disabled={!submitActive || loading}
-                            onClick={submitActive && !loading ? handleSend : undefined}
-                            className={`text-xs rounded-xl font-medium px-8 py-1 ${submitActive && !loading
+
+            <div className="flex flex-col">
+                <div className="flex justify-center mt-3">
+                    <motion.div className="bg-gray-800 rounded-xl p-8 text-white flex flex-col gap-10 w-96"
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{
+                            type: "spring",
+                            damping: 5,
+                            stiffness: 300
+                        }}>
+                        <div>
+                            <h2 className="text-yellow-300 font-medium md:font-bold md:text-lg ">Get in touch</h2>
+                            <p className="text-xs text-gray-300">simply fill out the contact form below, and I’ll get back to you as soon as possible!</p>
+                        </div>
+                        <div>
+                            <p className="text-xs text-gray-300">Name *</p>
+                            <input onChange={handleName} value={name} className="bg-transparent w-[100%] border-b-2 border-yellow-400 outline-none" type="text" required />
+                        </div>
+                        <div>
+                            <p className="text-xs text-gray-300">Phone Number (Optional)</p>
+                            <input onChange={handlePhoneNumber} value={phoneNumber} className="bg-transparent w-[100%] border-b-2 border-yellow-400 outline-none" type="text" />
+                        </div>
+                        <div>
+                            <p className="text-xs text-gray-300">Email Address *</p>
+                            <input
+                                onChange={handleEmail}
+                                onBlur={() => setEmailAlert(!isValidEmail(email))}
+                                value={email}
+                                className="bg-transparent w-full border-b-2 border-yellow-400 outline-none"
+                                type="email"
+                                required
+                            />
+                            {emailAlert && (
+                                <p className="text-xs text-red-400 pt-1">
+                                    Invalid Email Address. Please Try Again!
+                                </p>
+                            )}
+
+                        </div>
+                        <div>
+                            <p className="text-xs text-gray-300">Message *</p>
+                            <textarea onChange={handleMsg} value={msg} className="bg-transparent w-[100%] border-b-2 border-yellow-400 outline-none" required />
+                        </div>
+                        <div className="flex justify-center">
+                            <button
+                                disabled={!submitActive || loading}
+                                onClick={submitActive && !loading ? handleSend : undefined}
+                                className={`text-xs rounded-xl font-medium px-8 py-1 ${submitActive && !loading
                                     ? "bg-yellow-400 text-black"
                                     : "bg-yellow-100 text-black cursor-not-allowed"
-                                }`}>
-                            {loading ? "Sending..." : "Send"}
-                        </button>
-                    </div>
-                </motion.div>
+                                    }`}>
+                                {loading ? "Sending..." : "Send"}
+                            </button>
+                        </div>
+                    </motion.div>
+                </div>
+
             </div>
 
 
