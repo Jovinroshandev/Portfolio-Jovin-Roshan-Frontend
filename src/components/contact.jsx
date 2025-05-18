@@ -49,9 +49,10 @@ export default function Contact({ setActiveBtn }) {
     const handleEmail = (e) => setEmail(e.target.value)
     
     const handleMsg = (e) => setMsg(e.target.value)
+    const CONTACT_API__URI = process.env.REACT_APP_CONTACT_URI
     const handleSend = async () => {
         try {
-            await axios.post("http://localhost:5000/contact", {
+            await axios.post(CONTACT_API__URI, {
                 name: name.trim(),
                 phoneNumber: phoneNumber.trim(),
                 email: email.trim(),
