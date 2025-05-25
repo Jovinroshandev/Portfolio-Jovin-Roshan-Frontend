@@ -53,8 +53,8 @@ export default function About({ setActiveBtn }) {
             icon: "fa-brands fa-python"
         },
         {
-            name: "Postman",
-            icon: "fa-solid fa-paper-plane"
+            name: "Firebase",
+            icon: "fa-solid fa-fire"
         },
         {
             name: "Git",
