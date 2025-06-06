@@ -11,13 +11,21 @@ import PerfumyReactAppGIF from "../assets/project_videos/PerfumyGIF.gif";
 import LoveTailGIF from "../assets/project_videos/LoveTailGIF.gif";
 import TripAdvisorGIF from "../assets/project_videos/TripAdvisorGIF.gif";
 import UdemyCloneGIF from "../assets/project_videos/CloneUdemyGIF.gif"
-
+import EcommerceSideGIF from "../assets/project_videos/ecommerce.gif"
 export default function Project({ setActiveBtn }) {
   useEffect(() => {
     setActiveBtn("Project");
   }, [setActiveBtn]);
 
   const projectData = [
+    {
+      projectName: "E-commerce Website",
+      description:
+        "Built using the MERN stack (MongoDB, Express, React, Node.js), this project is a fully functional, scalable e-commerce platform tailored for a modern T-shirt printing business.A fully responsive online learning platform built with React, replicating the core features of Udemy.",
+      githubLink: "https://github.com/Jovinroshandev/CyberTDesgin-Ecommerce-front",
+      demoLink: "https://cyber-t-desgin-ecommerce-front.vercel.app/",
+      GIF: EcommerceSideGIF,
+    },
     {
       projectName: "BULK MAIL APP",
       description:
