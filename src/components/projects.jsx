@@ -21,7 +21,7 @@ export default function Project({ setActiveBtn }) {
     {
       projectName: "E-commerce Website",
       description:
-        "Built using the MERN stack (MongoDB, Express, React, Node.js), this project is a fully functional, scalable e-commerce platform tailored for a modern T-shirt printing business.A fully responsive online learning platform built with React, replicating the core features of Udemy.",
+        "Built using the MERN stack (MongoDB, Express, React, Node.js), this project is a fully functional, scalable e-commerce platform tailored for a modern T-shirt printing business",
       githubLink: "https://github.com/Jovinroshandev/CyberTDesgin-Ecommerce-front",
       demoLink: "https://cyber-t-desgin-ecommerce-front.vercel.app/",
       GIF: EcommerceSideGIF,
