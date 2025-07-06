@@ -7,7 +7,7 @@ const MenuBtn = (props) => {
     const ActivebtnStyle = "bg-white cursor-default p-2 hover:bg-black hover:text-white rounded-3xl"
     const {onClick,icon,manageativeBtn,btn} = props
     return (
-        <button  onClick={onClick} className={manageativeBtn==btn?ActivebtnStyle:inActivebtnStyle}>
+        <button  onClick={onClick} className={manageativeBtn===btn?ActivebtnStyle:inActivebtnStyle}>
             <i className={icon} />{props.btn}
         </button>
     )
