@@ -10,14 +10,24 @@ import NumberGussingGIF from "../assets/project_videos/RandomNumberFindGIF.gif";
 import PerfumyReactAppGIF from "../assets/project_videos/PerfumyGIF.gif";
 import LoveTailGIF from "../assets/project_videos/LoveTailGIF.gif";
 import TripAdvisorGIF from "../assets/project_videos/TripAdvisorGIF.gif";
-import UdemyCloneGIF from "../assets/project_videos/CloneUdemyGIF.gif"
-import EcommerceSideGIF from "../assets/project_videos/ecommerce.gif"
+import UdemyCloneGIF from "../assets/project_videos/CloneUdemyGIF.gif";
+import EcommerceSideGIF from "../assets/project_videos/ecommerce.gif";
+import PhoenixWebsite from "../assets/project_videos/phoenixcoinwebsite.gif";
+
 export default function Project({ setActiveBtn }) {
   useEffect(() => {
     setActiveBtn("Project");
   }, [setActiveBtn]);
 
   const projectData = [
+    {
+      projectName: "Phoenix Coin Website",
+      description:
+        "Fiverr Freelacing Project - Phoenix coin website is a crypto coin related website",
+      githubLink: "https://github.com/Jovinroshandev/Phoenix",
+      demoLink: "https://itsphoenixcoin.com/",
+      GIF: PhoenixWebsite,
+    },
     {
       projectName: "E-commerce Website",
       description:
